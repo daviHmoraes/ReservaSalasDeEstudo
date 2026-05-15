@@ -7,7 +7,6 @@ import java.util.HashMap;
 
 public class UsuarioRepository {
 
-    private UsuarioEntity usuario;
     private HashMap<Integer, UsuarioEntity> listaUsuarios = new HashMap<>();
 
     public void salvar(UsuarioEntity usuario){
