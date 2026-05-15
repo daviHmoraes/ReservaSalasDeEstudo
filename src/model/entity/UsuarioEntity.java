@@ -3,13 +3,13 @@ package model.entity;
 public class UsuarioEntity {
 
     private String nome;
-    private int id;
+    private int id = 1;
     private int idPlus;
     private String cpf;
 
-    public UsuarioEntity(String nome, int id, int idPlus, String cpf) {
-        this.nome = nome;
+    public UsuarioEntity(String nome, String cpf) {
         this.id = idPlus++;
+        this.nome = nome;
         this.cpf = cpf;
     }
 
