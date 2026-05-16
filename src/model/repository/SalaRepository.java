@@ -36,4 +36,10 @@ public class SalaRepository {
 
     }
 
+    public void atualizar(Sala sala) {
+
+        salaHashMap.put(sala.getId(), sala);
+
+    }
+
 }
