@@ -2,14 +2,15 @@ package model.entity;
 
 public class Sala {
 
-    private int id;
+    private int id = 1;
+    private int idPlus;
     private int numero;
     private int capacidade;
     private boolean disponivel;
 
-    public Sala (int id, int numero, int capacidade, boolean disponivel){
+    public Sala (int numero, int capacidade, boolean disponivel){
 
-        this.id = id;
+        this.id = idPlus++;
         this.numero = numero;
         this.capacidade = capacidade;
         this.disponivel = disponivel;
@@ -21,6 +22,14 @@ public class Sala {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    public int getIdPlus() {
+        return idPlus;
+    }
+
+    public void setIdPlus(){
+        this.idPlus = idPlus;
     }
 
     public int getNumero() {
@@ -46,6 +55,8 @@ public class Sala {
     public void setDisponivel(boolean disponivel) {
         this.disponivel = disponivel;
     }
+
+
 
     public void exixbirDados(){
         System.out.println( "ID: " + id );
