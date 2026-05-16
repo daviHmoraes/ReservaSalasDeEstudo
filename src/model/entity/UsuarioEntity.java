@@ -2,9 +2,9 @@ package model.entity;
 
 public class UsuarioEntity {
 
+    private static int idPlus = 1;
     private String nome;
-    private int id = 1;
-    private int idPlus;
+    private int id;
     private String cpf;
 
     public UsuarioEntity(String nome, String cpf) {
