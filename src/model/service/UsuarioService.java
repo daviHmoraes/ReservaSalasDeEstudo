@@ -14,10 +14,11 @@ public class UsuarioService {
     public boolean cadastrar(UsuarioEntity usuario) {
 
         for (UsuarioEntity usuarios : usuarioRepository.listar().values()) {
-                if(usuarios.getCpf().equals(usuarios.getCpf())){
+                if(usuarios.getCpf().equals(usuario.getCpf())){
                     return false;
                 }
         }
+        usuarioRepository.salvar(usuario);
         return true;
     }
 
