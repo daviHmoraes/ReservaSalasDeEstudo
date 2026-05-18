@@ -39,6 +39,14 @@ public class SalaService {
         return true;
     }
 
+    //buscar por ID
+
+    public Sala buscarPorID(int id){
+
+    return salaRepository.buscarID(id);
+
+    }
+
     //listar
     public HashMap<Integer, Sala> listarSalas() {
 
