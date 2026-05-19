@@ -16,7 +16,7 @@ public class ReservaRepository {
         return listaReservas.get(id);
     }
 
-    public HashMap<Integer, Reserva> lista() {
+    public HashMap<Integer, Reserva> listar() {
         return listaReservas;
     }
 
