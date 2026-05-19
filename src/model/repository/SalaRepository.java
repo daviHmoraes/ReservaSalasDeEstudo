@@ -1,12 +1,12 @@
 package model.repository;
 
-import model.entity.Sala;
+import model.entity.SalaEntity;
 
 import java.util.HashMap;
 
 public class SalaRepository {
 
-    private HashMap<Integer, Sala> salaHashMap;
+    private HashMap<Integer, SalaEntity> salaHashMap;
 
     public SalaRepository() {
 
@@ -14,19 +14,19 @@ public class SalaRepository {
 
     }
 
-    public void salvar(Sala sala) {
+    public void salvar(SalaEntity salaEntity) {
 
-        salaHashMap.put(sala.getId(), sala);
+        salaHashMap.put(salaEntity.getId(), salaEntity);
 
     }
 
-    public Sala buscarID(int id) {
+    public SalaEntity buscarID(int id) {
 
         return salaHashMap.get(id);
 
     }
 
-    public HashMap<Integer, Sala> listarSala() {
+    public HashMap<Integer, SalaEntity> listarSala() {
         return salaHashMap;
     }
 
@@ -36,9 +36,9 @@ public class SalaRepository {
 
     }
 
-    public void atualizar(Sala sala) {
+    public void atualizar(SalaEntity salaEntity) {
 
-        salaHashMap.put(sala.getId(), sala);
+        salaHashMap.put(salaEntity.getId(), salaEntity);
 
     }
 
