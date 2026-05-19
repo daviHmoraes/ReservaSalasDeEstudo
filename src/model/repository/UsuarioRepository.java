@@ -1,27 +1,26 @@
 package model.repository;
 
-import model.entity.UsuarioEntity;
+import model.entity.Usuario;
 
-import java.util.Collection;
 import java.util.HashMap;
 
 public class UsuarioRepository {
 
-    private HashMap<Integer, UsuarioEntity> listaUsuarios = new HashMap<>();
+    private HashMap<Integer, Usuario> listaUsuarios = new HashMap<>();
 
-    public void salvar(UsuarioEntity usuario){
+    public void salvar(Usuario usuario){
         listaUsuarios.put(usuario.getId(), usuario);
     }
 
-    public UsuarioEntity buscarPorId(int id){
+    public Usuario buscarPorId(int id){
         return listaUsuarios.get(id);
     }
 
-    public HashMap<Integer, UsuarioEntity> listar(){
+    public HashMap<Integer, Usuario> listar(){
         return listaUsuarios;
     }
 
-    public void atualizar(UsuarioEntity usuario){
+    public void atualizar(Usuario usuario){
         listaUsuarios.put(usuario.getId(), usuario);
     }
 

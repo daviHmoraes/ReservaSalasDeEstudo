@@ -1,6 +1,6 @@
 package controller;
 
-import model.entity.UsuarioEntity;
+import model.entity.Usuario;
 import model.service.UsuarioService;
 
 public class UsuarioController {
@@ -13,7 +13,7 @@ public class UsuarioController {
 
     public void cadastrarUsuario(String nome, String cpf) {
 
-        UsuarioEntity usuario = new UsuarioEntity(nome, cpf);
+        Usuario usuario = new Usuario(nome, cpf);
 
         boolean sucesso = usuarioService.cadastrar(usuario);
 
@@ -34,7 +34,7 @@ public class UsuarioController {
 
     public void buscarUsuario(int id) {
 
-        UsuarioEntity usuario = usuarioService.buscarPorId(id);
+        Usuario usuario = usuarioService.buscarPorId(id);
 
         if (usuario != null) {
 
@@ -47,7 +47,7 @@ public class UsuarioController {
 
     public void atualizarUsuario(int id, String nome, String cpf) {
 
-        UsuarioEntity usuario = usuarioService.buscarPorId(id);
+        Usuario usuario = usuarioService.buscarPorId(id);
 
         if (usuario != null) {
 

@@ -1,6 +1,6 @@
 package model.service;
 
-import model.entity.UsuarioEntity;
+import model.entity.Usuario;
 import model.repository.UsuarioRepository;
 
 public class UsuarioService {
@@ -11,9 +11,9 @@ public class UsuarioService {
         this.usuarioRepository = usuarioRepository;
     }
 
-    public boolean cadastrar(UsuarioEntity usuario) {
+    public boolean cadastrar(Usuario usuario) {
 
-        for (UsuarioEntity usuarios : usuarioRepository.listar().values()) {
+        for (Usuario usuarios : usuarioRepository.listar().values()) {
                 if(usuarios.getCpf().equals(usuario.getCpf())){
                     return false;
                 }
@@ -23,17 +23,17 @@ public class UsuarioService {
     }
 
     public void listar(UsuarioRepository usuario){
-        for(UsuarioEntity usuarios : usuarioRepository.listar().values()){
+        for(Usuario usuarios : usuarioRepository.listar().values()){
             usuarios.exibirDados();
             System.out.println("------------");
         }
     }
 
-    public UsuarioEntity buscarPorId(int id){
+    public Usuario buscarPorId(int id){
         return usuarioRepository.buscarPorId(id);
     }
 
-    public void atualizar(UsuarioEntity usuarios){
+    public void atualizar(Usuario usuarios){
         if(usuarioRepository.buscarPorId(usuarios.getId()) !=null){
             usuarioRepository.atualizar(usuarios);
         }else{
