@@ -1,13 +1,13 @@
 package model.entity;
 
-public class UsuarioEntity {
+public class Usuario {
 
     private static int idPlus = 1;
     private String nome;
     private int id;
     private String cpf;
 
-    public UsuarioEntity(String nome, String cpf) {
+    public Usuario(String nome, String cpf) {
         this.id = idPlus++;
         this.nome = nome;
         this.cpf = cpf;

@@ -1,6 +1,6 @@
 package model.service;
 
-import model.entity.SalaEntity;
+import model.entity.Sala;
 import model.repository.SalaRepository;
 
 import java.util.HashMap;
@@ -15,8 +15,8 @@ public class SalaService {
 
     }
 
-    public boolean cadastrarSala(SalaEntity salaEntity) {
-        if (salaEntity.getCapacidade() <= 0) {
+    public boolean cadastrarSala(Sala sala) {
+        if (sala.getCapacidade() <= 0) {
 
             System.out.println("Capacidade inválida. ");
             return false;
@@ -24,14 +24,14 @@ public class SalaService {
         }
 
         //verifica se já existe sala com esse ID
-        if (salaRepository.buscarID(salaEntity.getId()) != null) {
+        if (salaRepository.buscarID(sala.getId()) != null) {
 
             System.out.println("Já existe uma sala cadastrada com esse ID. ");
             return false;
 
         }
 
-        salaRepository.salvar(salaEntity);
+        salaRepository.salvar(sala);
 
         System.out.println();
 
@@ -41,30 +41,30 @@ public class SalaService {
 
     //buscar por ID
 
-    public SalaEntity buscarPorID(int id){
+    public Sala buscarPorID(int id){
 
     return salaRepository.buscarID(id);
 
     }
 
     //listar
-    public HashMap<Integer, SalaEntity> listarSalas() {
+    public HashMap<Integer, Sala> listarSalas() {
 
         return salaRepository.listarSala();
 
     }
 
     //atualizar
-    public boolean atualizarSala(SalaEntity salaEntityAtualizada) {
+    public boolean atualizarSala(Sala salaAtualizada) {
 
-        if (salaRepository.buscarID(salaEntityAtualizada.getId()) == null) {
+        if (salaRepository.buscarID(salaAtualizada.getId()) == null) {
 
             System.out.println("Sala não encontrada. ");
             return false;
 
         }
 
-        if (salaEntityAtualizada.getCapacidade() <= 0) {
+        if (salaAtualizada.getCapacidade() <= 0) {
 
             System.out.println("Capacidade inválida. ");
             return false;
@@ -72,7 +72,7 @@ public class SalaService {
 
         }
 
-        salaRepository.atualizar(salaEntityAtualizada);
+        salaRepository.atualizar(salaAtualizada);
 
         System.out.println("Sala atualizada com sucesso. ");
         return true;

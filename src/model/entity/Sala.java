@@ -1,6 +1,6 @@
 package model.entity;
 
-public class SalaEntity {
+public class Sala {
 
     private int id;
     private static int idContador = 1;
@@ -8,7 +8,7 @@ public class SalaEntity {
     private int capacidade;
     private boolean disponivel;
 
-    public SalaEntity(int numero, int capacidade, boolean disponivel) {
+    public Sala(int numero, int capacidade, boolean disponivel) {
 
         this.id = idContador++;
         this.numero = numero;
