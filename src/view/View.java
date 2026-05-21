@@ -31,7 +31,7 @@ public class View {
         do {
 
             System.out.println("======= SISTEMA DE RESERVAS =======");
-            System.out.println("1. Gerenciar Usuários");
+            System.out.println("1. Gerenciar Usuários.");
             System.out.println("2. Gerenciar Salas");
             System.out.println("3. Gerenciar Reservas");
             System.out.println("0. Sair");
