@@ -7,7 +7,12 @@ import model.repository.*;
 
 public class ReservaService {
 
-    private final ReservaRepository reservaRepository = new ReservaRepository();
+    private ReservaRepository reservaRepository;
+
+    public ReservaService(ReservaRepository reservaRepository) {
+        this.reservaRepository = reservaRepository;
+    }
+
     private final UsuarioRepository usuarioRepository = new UsuarioRepository();
     private final SalaRepository salaRepository = new SalaRepository();
 

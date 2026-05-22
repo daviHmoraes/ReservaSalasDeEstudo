@@ -8,6 +8,10 @@ public class ReservaRepository {
 
     private HashMap<Integer, Reserva> listaReservas;
 
+    public ReservaRepository() {
+        listaReservas = new HashMap<>();
+    }
+
     public void salvar(Reserva reserva) {
         listaReservas.put(reserva.getId(), reserva);
     }

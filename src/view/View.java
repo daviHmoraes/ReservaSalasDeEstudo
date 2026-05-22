@@ -103,7 +103,7 @@ public class View {
 
             usuarioController.cadastrarUsuario(nome, cpf);
 
-        } catch (IllegalArgumentException e) {
+        } catch (RuntimeException e) {
 
             System.out.println(e.getMessage());
         }

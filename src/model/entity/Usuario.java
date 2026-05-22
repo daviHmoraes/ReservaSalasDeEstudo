@@ -9,8 +9,8 @@ public class Usuario {
 
     public Usuario(String nome, String cpf) {
         this.id = idPlus++;
-        this.nome = nome;
-        this.cpf = cpf;
+        setNome(nome);
+        setCpf(cpf);
     }
 
     public String getNome() {
@@ -18,7 +18,13 @@ public class Usuario {
     }
 
     public void setNome(String nome) {
-        this.nome = nome;
+
+        if(!nome.isBlank()) {
+            this.nome = nome;
+        } else {
+            throw new RuntimeException("ERRO: Nome não pode ser vazio");
+        }
+
     }
 
     public int getId() {
@@ -42,7 +48,13 @@ public class Usuario {
     }
 
     public void setCpf(String cpf) {
-        this.cpf = cpf;
+
+        if (!cpf.isBlank()) {
+            this.cpf = cpf;
+        } else {
+            throw new RuntimeException("ERRO: CPF não pode ser vazio");
+        }
+
     }
 
     public void exibirDados(){

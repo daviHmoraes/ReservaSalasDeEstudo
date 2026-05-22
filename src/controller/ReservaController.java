@@ -5,7 +5,11 @@ import model.service.ReservaService;
 
 public class ReservaController {
 
-    private ReservaService reservaService = new ReservaService();
+    private ReservaService reservaService;
+
+    public ReservaController(ReservaService reservaService) {
+        this.reservaService = reservaService;
+    }
 
     public void cadastrar(Reserva reserva, int idUsuario, int idSala) {
         reservaService.cadastrar(reserva, idUsuario, idSala);

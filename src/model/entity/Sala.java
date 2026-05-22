@@ -9,7 +9,6 @@ public class Sala {
     private boolean disponivel;
 
     public Sala(int numero, int capacidade, boolean disponivel) {
-
         this.id = idContador++;
         this.numero = numero;
         this.capacidade = capacidade;

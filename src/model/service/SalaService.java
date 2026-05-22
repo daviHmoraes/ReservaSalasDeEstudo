@@ -9,9 +9,9 @@ public class SalaService {
 
     private SalaRepository salaRepository;
 
-    public SalaService() {
+    public SalaService(SalaRepository salaRepository) {
 
-        salaRepository = new SalaRepository();
+        this.salaRepository = salaRepository;
 
     }
 
@@ -34,8 +34,6 @@ public class SalaService {
         salaRepository.salvar(sala);
 
         System.out.println();
-
-        System.out.println("Sala cadastrada com sucesso. ");
         return true;
     }
 
